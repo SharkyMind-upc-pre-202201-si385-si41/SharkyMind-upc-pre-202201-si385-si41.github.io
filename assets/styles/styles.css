@@ -268,7 +268,6 @@ nav button {
     color: var(--color-black);
 }
 
-
 .about__container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -381,71 +380,125 @@ nav button {
 /*About Us section*/
 .About-Us{
     background-color: #02AAEE;
+    color: white;
+    padding: 5rem 50px 0rem 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+
+}
+
+.About-Us_text{
+    text-align: center;
+    display: grid;
     align-items: center;
-    gap: 5rem;
 }
-.About-Us_left{
-    margin-left: 125px;
+
+.About-Us_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
 }
+
 .About-Us_right__UPC{
     width: auto;
-    max-height: 384px;
+    height: 100%;
 }
 
-.About-the-team{
-    color: black;
-    background-color: #ffffff;
-
-}
-.About-the-team_members{
+/*  */
+.Team{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    margin-bottom: 30px;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    justify-items: center;
 }
-.About-the-team_members__member{
-    width: 258px;
-    height: 400px;
+
+.About-the-team h2{
+    text-align: left;
+    text-indent: 25px;
+}
+
+.Card-member{
+    width: 250px;
+    height: 350px;
+    padding: 0px 5px;
     background-color: #007BBB;
     text-align: center;
     border-radius: 5%;
 }
-.About-the-team_members__member img{
-    height: 295.83px;
+
+
+.Card-member img{
+    width: 240px;
+    height: 250px;
+    margin-top: 5px;
+    border-radius: 5%;
 }
 
-.About-the-team_members__member__social-list{
+.Card-member__social-list{
     list-style: none;
-    margin-left: 40%;
-    margin-right: 40%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
-.About-the-team_members__member__social-list__social{
+
+.Card-member__social-network{
     float: left;
-    margin: 3px;
+    padding: 2px 5px;
+    border: 1px;
 }
-.About-the-team__phrase{
+
+.Phrase{
     color: white;
-    margin-left: 25%;
-    margin-right: 25%;
+    outline: solid 5px black;
     border-radius: 20px;
     background-color:  #007BBB;
+    margin-top: 5rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 25px;
+
 }
 
+.Phrase h2{
+    text-align: center;
+}
+/*  */
 .Team-Video{
     color: black;
     background-color: #ffffff;
 }
 
 .Team-Video_SharkyTeam-video{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+}
+.Team-Video_SharkyTeam-video iframe{
+
+    width : 699px;
+    height: 393px;
+}
+
+@media screen and (max-width: 800px) {
+    .Team-Video_SharkyTeam-video{
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        position: relative;
+    }
+
+    .Team-Video_SharkyTeam-video iframe, .Team-Video_SharkyTeam-video object, .Team-Video_SharkyTeam-video embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
 
 /* Plans section*/
-
-
 .plans_introduction {
     width: var(--container-width-lg);
     margin: 0 auto;
