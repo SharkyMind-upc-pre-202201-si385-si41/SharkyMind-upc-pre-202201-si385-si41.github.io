@@ -1,4 +1,4 @@
-$.get("_header.html", contentToInject => {
+$.get("header.html", contentToInject => {
     $("#header-placeholder").replaceWith(contentToInject);
 
     window.addEventListener('scroll', () => {
@@ -28,7 +28,7 @@ $.get("_header.html", contentToInject => {
 
 });
 
-$.get("_footer.html", contentToInject => {
+$.get("footer.html", contentToInject => {
     $("#footer-placeholder").replaceWith(contentToInject);
 });
 
